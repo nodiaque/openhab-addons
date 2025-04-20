@@ -52,6 +52,7 @@ public class TapoThingConstants {
     public static final String DEVICE_T315 = "T315";
     public static final String DEVICE_S210 = "S210";
     public static final String DEVICE_S220 = "S220";
+    public static final String DEVICE_HS200 = "HS200";
     public static final String DEVICE_UNIVERSAL = "Test_Device";
 
     /*** LIST OF SUPPORTED DEVICE DESCRIPTIONS ***/
@@ -66,6 +67,7 @@ public class TapoThingConstants {
     public static final String DEVICE_DESCRIPTION_MOTION_SENSOR = "Motion-Sensor";
     public static final String DEVICE_DESCRIPTION_TEMP_SENSOR = "Temperature-Sensor";
     public static final String DEVICE_DESCRIPTION_SMART_SWITCH = "Smart-Switch";
+    public static final String DEVICE_DESCRIPTION_KASA_SMART_SWITCH = "Kasa-Smart-Switch";
 
     /*** LIST OF SUPPORTED THING UIDS ***/
     public static final ThingTypeUID BRIDGE_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_BRIDGE);
@@ -82,6 +84,7 @@ public class TapoThingConstants {
     public static final ThingTypeUID L900_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_L900);
     public static final ThingTypeUID L920_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_L920);
     public static final ThingTypeUID L930_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_L930);
+    public static final ThingTypeUID HS200_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_HS200);
     public static final ThingTypeUID UNIVERSAL_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_UNIVERSAL);
 
     /*** LIST OF SUPPORTED HUB CHILD THING UIDS ***/
@@ -107,13 +110,14 @@ public class TapoThingConstants {
     public static final Set<ThingTypeUID> SUPPORTED_MOTION_SENSORS = Set.of();
     public static final Set<ThingTypeUID> SUPPORTED_WEATHER_SENSORS = Set.of(T310_THING_TYPE, T315_THING_TYPE);
     public static final Set<ThingTypeUID> SUPPORTED_SMART_SWITCHES = Set.of(S210_THING_TYPE, S220_THING_TYPE);
+    public static final Set<ThingTypeUID> SUPPORTED_KASA_SMART_SWITCHES = Set.of(HS200_THING_TYPE);
 
     /*** SET OF ALL SUPPORTED THINGS ***/
     public static final Set<ThingTypeUID> SUPPORTED_THING_TYPES_UIDS = Collections.unmodifiableSet(
             Stream.of(SUPPORTED_BRIDGE_UIDS, SUPPORTED_HUB_UIDS, SUPPORTED_SOCKET_UIDS, SUPPORTED_SOCKET_STRIP_UIDS,
                     SUPPORTED_WHITE_BULB_UIDS, SUPPORTED_COLOR_BULB_UIDS, SUPPORTED_LIGHT_STRIP_UIDS,
                     SUPPORTED_SMART_CONTACTS, SUPPORTED_MOTION_SENSORS, SUPPORTED_WEATHER_SENSORS,
-                    SUPPORTED_SMART_SWITCHES).flatMap(Set::stream).collect(Collectors.toSet()));
+                    SUPPORTED_SMART_SWITCHES, SUPPORTED_KASA_SMART_SWITCHES).flatMap(Set::stream).collect(Collectors.toSet()));
 
     /*** THINGS WITH ENERGY DATA ***/
     public static final Set<ThingTypeUID> SUPPORTED_ENERGY_DATA_UIDS = Set.of(P110_THING_TYPE, P115_THING_TYPE);
